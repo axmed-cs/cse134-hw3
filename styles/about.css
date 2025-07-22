@@ -16,7 +16,7 @@
 }
 
 /* Large screens (desktops) */
-@media (max-width: 1200px) {
+@media (min-width: 901px) {
     main {
         font-size: 1.2rem;
     }
