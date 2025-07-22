@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="styles/index.css">
+    <style>
+        #canvas {
+            border: 2px solid #000000;
+        }
+    </style>
     <noscript>Your browser does not support Javascript.</noscript>
 </head>
 <body>
@@ -27,8 +32,8 @@
             <article>
                 <h2>funProjectA</h2>
                 <picture>
-                    <source media="" srcset="images/projectLoad.png">
-                    <img src="images/projectLoad.png" alt="picture of project homepage">
+                    <source media="" srcset="assets/projectLoad.png">
+                    <img src="assets/projectLoad.png" alt="picture of project homepage">
                 </picture>
                 <p>This project is being built with the intention of it being <b>fun</b>.</p>
             </article>
@@ -36,16 +41,109 @@
             <article>
                 <h2>usefulProjectB</h2>
                 <picture>
-                    <source media="" srcset="images/projectLoad.png">
-                    <img src="images/projectLoad.png" alt="picture of project homepage">
+                    <source media="" srcset="assets/projectLoad.png">
+                    <img src="assets/projectLoad.png" alt="picture of project homepage">
                 </picture>
                 <p>This project is being built with the intention of it being <b>useful</b>.</p>
             </article>
+        </section>
+
+        <section>
+            <h1>Experiments/misc</h1>
+            <h2>Example website</h2>
+            <iframe src="https://www.example.com" title="Example"></iframe>
+            
+            <h2>party horn</h2>
+            <audio controls>
+                <source src="assets/party-horn.mp3" type="audio/mpeg">
+            </audio>
+            
+            <h2>cars in a highway</h2>
+            <video height="240" width="320" controls>
+                <source src="assets/cars.mp4" type="video/mp4">
+            </video>
+            
+            <h2>canvas</h2>
+            <canvas id="canvas" width="240" height="100"></canvas>
+            
+            <h2><del>Red</del> <ins>Maroon</ins> circle</h2>
+            <svg>
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="maroon"/>
+            </svg>
+
+            <h2>Grocery List</h2>
+            <ol>
+                <li>Milk</li>
+                <li>Apple</li>
+                <li>Potatoe</li>
+                <li>Bread</li>
+            </ol>
+
+            <h2>Options</h2>
+            <label for="cars">Select a car</label>
+            <select name="cars">
+                <optgroup label="German Cars">
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                    <option value="mercedes">Mercedes</option>
+                </optgroup>
+                <optgroup label="American Cars">
+                    <option value="ford">Ford</option>
+                    <option value="dodge">Dodge</option>
+                    <option value="tesla">Tesla</option>
+                </optgroup>
+                <optgroup label="Japaneses Cars">
+                    <option value="honda">Honda</option>
+                    <option value="toyota">Toyota</option>
+                    <option value="mazda">Mazda</option>
+                </optgroup>
+            </select>
+
+            <h2>Stat</h2>
+            <label for="file">Stamina:</label>
+            <progress id="file" value="72" max="100"> 32% </progress>
+
+            <h2>Template</h2>
+            <template>
+                <p>Cat says Hi!</p>
+                <figure>
+                    <img src="assets/cat.jpg" alt="black and white cat">
+                    <figcaption>Fig.1 - Cat</figcaption>
+                </figure>
+            </template>   
+            <p>Hidden for now</p>
+
+            
+            <h2>Quote</h2>
+            <blockquote cite="https://www.brainyquote.com/quotes/jen_sincero_938283?src=t_find">
+                <p>If you're serious about changing your life, you'll find a way. If you're not, you'll find an excuse.</p>
+            </blockquote>
+            <p>-Jen Sincero, <cite> You Are a Badass®: How to Stop Doubting Your Greatness and Start Living an Awesome Life</cite></p>
+        
+            <h2>Search box</h2>
+            <search>
+                <label for="search">
+                    Enter query
+                </label>
+                <input name="search" type="search"> 
+                <button>Search</button>
+            </search>
+
+            <h2>To open a new tab press</h2>
+            <p><kbd>Ctrl</kbd> + <kbd>t</kbd> (on Windows)</p>
+            <p><kbd>Cmd</kbd> + <kbd>t</kbd> (on Mac OS)</p>
+            <dialog open>Hello there!</dialog>
+
         </section>
     </main>
 
     <footer></footer>
 
-    <script></script>
+    <script>
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("Hello World", 10, 50);
+    </script>
 </body>
 </html>
