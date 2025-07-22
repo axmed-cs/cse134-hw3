@@ -19,6 +19,44 @@ aside {
     background-color: rgba(128, 0, 0, 0.5);
     padding: 10px;
     border-radius: 10px;
+    transition: background-color 0.4s ease;
+    animation-name: change;
+    animation-duration: 3s;
+}
+aside:hover {
+    background-color: rgb(241, 110, 110);
+}
+
+main {
+    font-family: "Roboto mono";
+}
+
+aside h1 {
+    transform: skewY(0deg);
+    transition: transform 0.3s ease;
+}
+aside:hover h1 {
+    transform: skewY(-10deg);
+}
+
+aside p {
+    transform: skewX(0deg);
+    transition: transform 0.3s ease;
+}
+aside:hover p {
+    transform: skewX(-20deg);
+}
+
+
+@keyframes change {
+    0% {
+        border-radius: 0%;
+        background-color: rgba(128, 0, 0, 0.5);
+    }
+    25% {
+        border-radius: 25%;
+        background-color: rgba(128, 0, 0, 0.7);
+    }
 }
 
 /* Small screens (phones) */
