@@ -1,0 +1,23 @@
+@import url(navbar.css);
+@import url(global.css);
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+    form {
+        font-size: 1rem;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+    form {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 901px) {
+    form {
+        font-size: 1.2rem;
+    }
+}

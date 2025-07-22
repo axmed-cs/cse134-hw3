@@ -1,0 +1,43 @@
+@import url(navbar.css);
+@import url(global.css);
+
+picture img{
+    width: 100%;
+    border-radius: 25%;
+    max-width: 300px;
+    min-width: 200px;
+}
+
+
+#self-intro {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+aside {
+    background-color: rgba(128, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+    #self-intro, section {
+        font-size: 1rem;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 900px) {
+    #self-intro, section {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large screens (desktops) */
+@media (max-width: 1200px) {
+    #self-intro, section {
+        font-size: 1.2rem;
+    }
+}
